@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>System of Linear Equations</h1>
+    <div>
+      <p>System of Equations are a pairs of equations that are being used to solve.There are several ways to calculate answers in a system of equations. I will show an example to demonstrate the mechanism of working with situations like this.</p>
+      <p>Example: Solve the following system of equations:  4x + y = 4, and 2x - y = 8</p>
+      <img src="{% static 'inequality/system_example.png' %}">
+      <p>To solve this problem, the main problem is to get rid of one of the variables. Let's say we want to get rid of y. In this example we add both equations.</p>
+      <img src="{% static 'inequality/system_example1.png' %}">
+      <p>Once having one value we substitute x in either one of the equations. I will use the first equation</p>
+      <img src="{% static 'inequality/system_example2.png' %}">
+      <p>Now we have found the solution (2,-4). The solution is mostly the intersection of those two equations.</p>
+    </div>
+    <p>I will be leaving some examples by usign this method</p>
+    <li>
+      x+3y=6
+      -x-y=2
+    </li>
+    <li>
+      x-y=5
+      3x+y=3
+    </li>
+    <p>If you have questions regarding to other methods such as substitution, addition/elimination, set a session with me and I would gladly help you.</p>
+  </body>
+</html>

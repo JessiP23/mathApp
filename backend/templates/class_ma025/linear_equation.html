@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>Linear Equations</h1>
+    <p>Welcome to MA025 class, we are going to discuss in this topic some examples about two-step equations, and solve equations involving fractions, and some formulas.</p>
+    <div>
+      <h2>Two Step Equations</h2>
+      <p>After reviewing my last equation topic on MA010, this is likely similar but a little more complex. Let's see the following example:</p>
+      <img src="{% static 'complex_equations/two_step_equation.png' %}">
+      <p>It looks similar as the last example solve in last class, the difference is that x has a number next to it. Let's solve it.</p>
+      <ul>
+        <li>Place the variable on one side of the = sign. In this case, x is in the left side</li>
+        <img src="{% static 'complex_equations/two_step_equation1.png' %}">
+        <li>Isolate x. In this case, we move out any term that does not contain x, in this case is the +5</li>
+        <img src="{% static 'complex_equations/two_step_equation2.png' %}">
+        <li>Move +5 to the other side (Remember when transfering any number to the other side is with the opposite sign).</li>
+        <img src="{% static 'complex_equations/two_step_equation3.png' %}">
+        <li>If no more terms are in the x side, we can solve the right side.</li>
+        <img src="{% static 'complex_equations/two_step_equation4.png' %}">
+        <li>Here is the important part of this. Whenever you see a variable together with a coefficient means they are multiplying each other. So, 3 is multiplying x. To isolate x we need to get rid of 3, knowing some of our rules the way to transfer something to ther other side of the = is by its opposite sign. The opposite of multiplication is division.</li>
+        <img src="{% static 'complex_equations/two_step_equation5.png' %}">
+      </ul>
+      <p>This is how we solve our first two-step equation. Practice more examples on your own to master this content.</p>
+    </div>
+    <div>
+      <h2>General Equation</h2>
+      <p>This is general equations section. This is no more than a more complex equations where we will practice our knowledge in past topics. Example:</p>
+      <img src="{% static 'complex_equations/general_equation.png' %}">
+      <ol>
+        <li>Solve first what is inside the parenthesis.</li>
+        <img src="{% static 'complex_equations/general_equation1.png' %}">
+        <li>Let's move to the other side everything that has no x on it, in this case is +8 and -2 with opposite signs.</li>
+        <img src="{% static 'complex_equations/general_equation2.png' %}">
+        <li>Solve the right side of the equation</li>
+        <img src="{% static 'complex_equations/general_equation3.png' %}">
+        <li>Solve for x (remember that a number together with variable means they are multiplying each other)</li>
+        <img src="{% static 'complex_equations/general_equation4.png' %}">
+      </ol>
+    </div>
+    <div>
+      <h2>Equations with fractions</h2>
+      <p>Let's make some equations involving fractions. Example: </p>
+      <img src="{% static 'complex_equations/fraction_equation.png' %}">
+      <p>I will show you how to solve until the difficult part comes in.</p>
+      <img src="{% static 'complex_equations/fraction_equation1.png' %}">
+      <img src="{% static 'complex_equations/fraction_equation2.png' %}">
+      <p>Stop!</p>
+      <li>Here be careful, when you see a fraction you divide as the same as we did in the first lessons.</li>
+      <img src="{% static 'complex_equations/fraction_equation3.png' %}">
+    </div>
+    <div>
+      <h2>Formulas</h2>
+      <p>Now let's use our knowledge into mathematical formulas.</p>
+      <img src="{% static 'complex_equations/formula_equation.png' %}">
+      <p>Be careful, we need to isolate s. First command is to move everything that does not include s. Let's do it</p>
+      <img src="{% static 'complex_equations/formula_equation1.png' %}">
+      <p>Now, isolate s. But r is together with s. This means those guys are together and multiplying. Do the opposite.</p>
+      <img src="{% static 'complex_equations/formula_equation2.png' %}">
+      <p>Perfect. Now we have solved one complex equation where there are only letters. Way to go!</p>
+    </div>
+  </body>
+</html>

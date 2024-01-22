@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <style>
+      .section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      #text{
+        margin: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>This is the ma010 class</h1>
+    </header>
+    <div class="section">
+      <a id="text" href="{% url 'class:whole_number' %}" class="class">Whole Numbers, fractions, decimals, percent, proportions</a>
+      <a id="text" href="{% url 'class:signed_number' %}" class="class">Signed numbers, Algebraic expressions</a>
+      <a id="text" href="{% url 'class:equations' %}" class="class">Equations</a>
+      <a id="text" href="{% url 'class:geometry' %}" class="class">Geometry, Exponents</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ma025 class</title>
+    <style>
+      .section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      #text{
+        margin: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is the ma025 class</h1>
+    <div class="section">
+      <a id="text" href="{% url 'class:linear_equation' %}" class="class">Linear Equations</a>
+      <a id="text" href="{% url 'class:inequality' %}" class="class">Inequalities</a>
+      <a id="text" href="{% url 'class:equations_two_variables' %}" class="class">Equations with 2 variables</a>
+      <a id="text" href="{% url 'class:equations_system' %}" class="class">System of linear equations</a>
+      <a id="text" href="{% url 'class:polynomial' %}" class="class">Polynomials</a>
+      <a id="text" href="{% url 'class:factoring' %}" class="class">Factoring</a>
+      <a id="text" href="{% url 'class:rational_expression' %}" class="class">Rational Expressions</a>
+      <a id="text" href="{% url 'class:radical' %}" class="class">Radicals</a>
+      <a id="text" href="{% url 'class:quadratic' %}" class="class">Quadratics</a>
+    </div>
+  </body>
+</html>

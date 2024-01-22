@@ -1,0 +1,62 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>Geometry</h1>
+    <p>Hello again. This is the gometry section. This is gonna be a really summarize section of geometry topic in college level.</p>
+    <p>First part, definitions.</p>
+    <ul>
+      <li><strong>Perimeter:</strong> The perimeter is calculated by just adding the measure of each side in a geometry shape.</li>
+      <li><strong>Area: </strong>Area is just the space occupied inside the perimeter.</li>
+    </ul>
+    <p>Example: </p>
+    <img src="{% static 'geometry/perimeter.png' %}" alt="rectangle perimeter">
+    <p>To calculate the perimeter:</p>
+    <ol>
+      <li>Count how many sides are in this shape</li>
+      <li>Get the measures of each side, if there are four sides then four measures are needed</li>
+      <li>Add those measures.</li>
+    </ol>
+    <p>Now you have calculated your perimeter. By following the steps above, I guess your answer is 60. If you guessed correctly, you are becoming better so fast. Glad for you.</p>
+    <p>Perimeter: 60</p>
+    <p>What about the area?</p>
+    <p>The area is a little more complicated because we need the well-known "formulas to calculate the area"</p>
+    <img src="{% static 'geometry/area_formulas.png' %}" alt="Area formulas for 2d shapes">
+    <p>I chose this picture from google images because there is defined each side's name and how to use this. To understand, first lets see our example and compare with the shapes we have in the formulas sheet. It seems that the figure is the rectangle.</p>
+    <div>
+      <img src="{% static 'geometry/perimeter.png' %}" alt="rectangle perimeter">
+      <img src="{% static 'geometry/rectangle.png' %}" alt="rectangle perimeter">
+      <img src="{% static 'geometry/the_rock.png' %}" alt="the rock">
+    </div>
+    <p>Perfect, those shapes match. Now let's calculate the area. If you see in the area sheet, we just need the height and the base. In the problem provided, the rectangle's height is 10 and the base 20. According to the formula, we multiply base * height</p>
+    <img src="{% static 'geometry/area_answer.png' %}" alt="answer area">
+
+    <h1>Cartesian Coordinate</h1>
+    <img src="{% static 'geometry/cartesian.png' %}" alt="Cartesian Coordinate System">
+    <p>This is the cartesian coordinate system. Suppose it is like a straight line with positve and negativa numbers called x, but now is intersected by another straight line with positive and negative numberswith 0 as the intersection called y.</p>
+    <p>The cartesian system is a plane where we can find points by using coordinates. The coordinates have the form (x,y). Example, locate the point (3,5) in the cartesian plane.</p>
+    <img src="{% static 'geometry/point_cartesian.png' %}" alt="coordinate(3,5)">
+    <p>Explanation: (3,5) is the point that has a value of +3 in the x line and +5 in the y line. From the origin, anything to the left or down are negative numbers and anything from the right and to the top are the positive numbers.</p>
+    <p>Next example: Find the points with coordinates (5,-4), (2,1), and (0,5)</p>
+    <img src="{% static 'geometry/points_cartesian.png' %}" alt="points">
+    <h1>Exponents</h1>
+    <img src="{% static 'geometry/exponents_rules.png' %}" alt="rules exponents">
+    <p>Look, this is the exponent rules table. No surprised, I will give you examples to understand those new rules that are fundamental in this class.</p>
+    <ul>
+      <li>Rule 1: When you multiply two equal variables, their exponents are added. Example:</li>
+      <img src="{% static 'geometry/exponents1.png' %}" alt="problem solved addition of exponents">
+      <li>Rule 2: When dividing terms, exponents are subtracted. Example: </li>
+      <img src="{% static 'geometry/division_exponents.png' %}" alt="division terms">
+      <img src="{% static 'geometry/division_exponents_explanation.png' %}" alt="division terms">
+      <li>Rule 3: When you have a power of a power, the exponents just multiply. Example: </li>
+      <img src="{% static 'geometry/power_power.png' %}" alt="division terms">
+      <img src="{% static 'geometry/power_power1.png' %}" alt="division terms">
+      <p>This is a review of rules of exponents. I have not covered all rules but you might have an idea how exponents work.</p>
+    </ul>
+  </body>
+</html>

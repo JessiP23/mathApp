@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style media="screen">
+        
+        body{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(36, 106, 172);
+            box-sizing: content-box;
+        }
+        .container{
+            background-color: #fff;
+            font-size: 1.5rem;
+            width: 30%;
+            max-width: 400px;
+            margin-top: 4%;
+            border-radius: 6px;
+            box-shadow: 10px 5px 2px 6px #302c2c;
+            padding: 20px;
+        }
+
+        h3{
+            margin-bottom: 4%;
+        }
+
+        .form-group{
+            margin-bottom: 15px;
+        }
+
+        .button-sign{
+            margin-top: 3%;
+        }
+
+        .text-button{
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 1100px){
+            .container{
+                width: 80%;
+            }
+            .form-group input{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <div class="container">
+            <h3>Signup</h3>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <br />
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <br />
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div class="form-group">
+                <label for="initialpassword">Password</label>
+                <br />
+                <input type="password" id="initialpassword" name="initialpassword">
+            </div>
+
+            <div class="form-group">
+                <label for="confirmpassword">Retype Password</label>
+                <br />
+                <input type="password" id="confirmpassword" name="confirmpassword">
+            </div>
+            <div class="button-sign">
+                <button type="submit" class="btn btn-primary btn-block text-button">Signup</button>
+            </div>
+            <div class="form-group">
+                <a href="{% url 'login' %}" >I already have an account</a>       
+            </div>
+        </div>
+    </form>
+</body>
+</html>

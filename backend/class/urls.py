@@ -17,4 +17,16 @@ urlpatterns = [
     path('rational_expression/', views.rational_expression,name="rational_expression"),
     path('radical/', views.radical,name="radical"),
     path('quadratic/', views.quadratic,name="quadratic"),
+    path('function_graph/', views.function_graph, name="function_graph"),
+    path('polynomial_function/', views.polynomial_function, name="polynomial_function"),
+    path('exponential_function/', views.exponential_function, name="exponential_function"),
+    path('trig_function/', views.trig_function, name="trig_function"),
+    path('sine_and_cosine/', views.sine_and_cosine, name="sine_and_cosine"),
+    path('conic_section/', views.conic_section, name="conic_section"),
+    path('function_and_graph/', views.function_and_graph, name="function_and_graph"),
+    path('limit/', views.limit, name="limit"),
+    path('derivative/', views.derivative, name="derivative"),
+    path('derivative_application/', views.derivative_application, name="derivative_application"),
+    path('integration/', views.integration, name="integration"),
 ] 
+

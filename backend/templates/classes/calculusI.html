@@ -1,11 +1,24 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/calculus.css' %}" >
   </head>
+
   <body>
-    <h1>This is the Calculus I class</h1>
+    <header>
+      <h1 class="classes">Calculus I</h1>
+      <a href="{% url 'classes' %}" class="link">Go Back</a>
+    </header>
+    <div class="section"> 
+      <a id="text" href="{% url 'class:function_and_graph' %}" class="class">Functions and Graphs</a>
+      <a id="text" href="{% url 'class:limit' %}" class="class">Limits</a>
+      <a id="text" href="{% url 'class:derivative' %}" class="class">Derivatives</a>
+      <a id="text" href="{% url 'class:derivative_application' %}" class="class">Application of derivatives</a>
+      <a id="text" href="{% url 'class:integration' %}" class="class">Integration</a>
+    </div>
   </body>
 </html>

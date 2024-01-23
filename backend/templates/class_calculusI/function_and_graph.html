@@ -1,0 +1,55 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/derivative.css' %}" >
+  </head>
+  <body>
+    <header>
+      <h1 class="classes">Functions and Graphs</h1>
+      <a href="{% url 'calculusI' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <section>
+        <h2>Inverse Functions</h2>
+        <p>To find the inverse function we just need to follow some steps:</p>
+        <p>Suppose I need to find the inverse function of f(x)=x^2-5. First of all, f^-1(x) is how inverse functions are represented.</p>
+        <img src="{% static 'calculus/function_and_graph/inverse_function.png' %}" alt="Inverse Function">
+        <p>Step 1: Convert f(x) to y.</p>
+        <img src="{% static 'calculus/function_and_graph/inverse_function1.png' %}" alt="Process to find the inverse">
+        <p>Step 2: Solve for x</p> 
+        <img src="{% static 'calculus/function_and_graph/inverse_function2.png' %}" alt="x value found in inverse function">
+        <p>Switch x with y and y with f^-1(x)</p>
+        <img src="{% static 'calculus/function_and_graph/inverse_function3.png' %}" alt="x and y switched">
+        <p>Function and Inverse ready to leave.</p>
+        <img src="{% static 'calculus/function_and_graph/meme.png' %}" alt="meme wait a minute">
+        <p>A function must pass the horizontal line test, the line must touch only one point of the graph. Let's see how the graph f(x)=x^2+5 looks like.</p>
+        <img src="{% static 'calculus/function_and_graph/graph.png' %}" alt="Horizontal line crossing graph by 2 points">
+        <img src="{% static 'calculus/function_and_graph/spongebob.png' %}" alt="Spongebob laughing">
+        <p>The line touched two points of the graph. This means f(x)=x^2+5 is not a function. Consequently, the inverse is not a function. Now, nothing is a function.</p>
+        <img src="{% static 'calculus/function_and_graph/rip.png' %}" alt="Enjoying cemetery">
+        <p><strong>In conclusion, those graphs that do not pass the horizontal test are not considered functions. By instance, no function inverses.</strong></p>
+      </section>
+      <p>Examples of graphs that are considered functions: </p>
+      <img src="{% static 'calculus/function_and_graph/example.png' %}" alt="graph with horizontal line">
+      <br /> 
+      <img src="{% static 'calculus/function_and_graph/example1.png' %}" alt="linear graph with horizontal line">
+      <section>
+        <h2>Logarithmic Functions</h2>
+        <img src="{% static 'calculus/function_and_graph/log_function.png' %}" alt="Log exercise">
+        <p>Last class I gave a brief introduction to logarithms. There is one example that involves exponential and logarithmic rules.</p>
+        <p>Step 1:</p>
+        <img src="{% static 'calculus/function_and_graph/log1.png' %}" alt="step to solve log functions">
+        <p>Step 2:</p>
+        <img src="{% static 'calculus/function_and_graph/log2.png' %}" alt="joining x's in the log exercise">
+        <p>Step 3:</p>
+        <img src="{% static 'calculus/function_and_graph/log3.png' %}" alt="process to move exponent as log rule">
+        <p>Step 4:</p>
+        <img src="{% static 'calculus/function_and_graph/log4.png' %}" alt="answer found">
+      </section>
+    </div>
+  </body>
+</html> 

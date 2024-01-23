@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Derivative</title>
+    <link rel="stylesheet" href="{% static 'styling/derivative.css' %}" >
+  </head>
+  <body> 
+    <header>
+      <h1 class="classes">Derivatives</h1>
+      <a href="{% url 'calculusI' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <p>Definition: Is a limit in which we compute to find the tangent to a point in a function.</p>
+      <img src="{% static 'calculus/derivative/derivative.png' %}" alt="definition of derivative">
+      <p>Example: f(x)=x^2, find the f'(2) by using the limit definition of derivative </p>
+      <img src="{% static 'calculus/derivative/derivative1.png' %}" alt="Example of derivative">
+      <img src="{% static 'calculus/derivative/derivative2.png' %}" alt="solving derivative">
+      <img src="{% static 'calculus/derivative/derivative3.png' %}" alt="Answer of derivative">
+      <p>Derivative function:</p>
+      <img src="{% static 'calculus/derivative/function_derivative.png' %}" alt="Function Derivative">
+      <p>Example: Find the derivative of the function f(x)=2x^2-3x</p>
+      <img src="{% static 'calculus/derivative/function_derivative1.png' %}" alt="Function Derivative Example">
+      <p>Replacing</p>
+      <img src="{% static 'calculus/derivative/function_derivative2.png' %}" alt="Function Derivative Process">
+      <p>Distributive multiplication</p>
+      <img src="{% static 'calculus/derivative/function_derivative3.png' %}" alt="Function Derivative Process">
+      <p>Simplifying and factoring numerator</p>
+      <img src="{% static 'calculus/derivative/function_derivative4.png' %}" alt="Function Derivative Simplifying">
+      <p>Replacing h->0 into the function</p>
+      <img src="{% static 'calculus/derivative/function_derivative5.png' %}" alt="Function Derivative limit solved">
+      <p>Our derivative is completed.</p>
+      <h2>Trig Functions</h2>
+      <img src="{% static 'calculus/derivative/trig_derivative.png' %}" alt="Trig functions with derivatives">
+      <p>Solving trig derivatives is just replacing derivatives and the problem is solved. </p>
+      <h2>Chain Rule</h2>
+      <p>Suppose we have two functions, one inside the other. The way to calculate this is by using the chain rule. Let's see the general formula and its derivative.</p>
+      <img src="{% static 'calculus/derivative/chain_rule.png' %}" alt="Chain Rule formula">
+      <p>Example: </p>
+      <img src="{% static 'calculus/derivative/chain_rule1.png' %}" alt="exercise">
+      <p>Be careful in the procedure to solve these questions by using chain rule.</p>
+      <img src="{% static 'calculus/derivative/chain_rule2.png' %}" alt="Process to solve chain rule problem">
+      <img src="{% static 'calculus/derivative/chain_rule3.png' %}" alt="Solution to chain rule problem">
+    </div>
+  </body>
+</html> 

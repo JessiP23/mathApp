@@ -5,25 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
     <style>
+      body{
+        background-color: #f0fff0;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #0dc295;
+        color: #ffffff;
+        font-size: 25px;
+      }
+
       .section{
         display: flex;
         flex-direction: column;
         text-align: center;
       }
+
       #text{
+        font-size: 40px;
+        text-decoration: none;
+        color: #138b2f;
         margin: 1%;
       }
+
+      #text:hover{
+        color: #1c4532;
+      }
+
+      .classes{
+        flex-grow: 1;
+        text-align: center;
+      }
+
+      .link{
+        text-decoration: none;
+      }
+
+      .class-link{
+        font-size: 30px;
+        text-decoration: none;
+        color: #138b2f;
+        margin: 1%;
+        transition: color 0.5s;
+      }
+
     </style>
   </head>
   <body>
     <header>
-      <h1>This is the ma010 class</h1>
+      <h1 class="classes">MA010</h1>
+      <a href="{% url 'classes' %}" class="link">Go Back</a>
     </header>
     <div class="section">
-      <a id="text" href="{% url 'class:whole_number' %}" class="class">Whole Numbers, fractions, decimals, percent, proportions</a>
-      <a id="text" href="{% url 'class:signed_number' %}" class="class">Signed numbers, Algebraic expressions</a>
-      <a id="text" href="{% url 'class:equations' %}" class="class">Equations</a>
-      <a id="text" href="{% url 'class:geometry' %}" class="class">Geometry, Exponents</a>
+      <a id="text" href="{% url 'class:whole_number' %}" class="class class-link">Whole Numbers, fractions, decimals, percent, proportions</a>
+      <a id="text" href="{% url 'class:signed_number' %}" class="class class-link">Signed numbers, Algebraic expressions</a>
+      <a id="text" href="{% url 'class:equations' %}" class="class class-link">Equations</a>
+      <a id="text" href="{% url 'class:geometry' %}" class="class class-link">Geometry, Exponents</a>
     </div>
   </body>
 </html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/asymptote.css' %}" >
+  </head>
+  <body> 
+    <header>
+      <h1>Trigonometric Functions</h1>
+      <a href="{% url 'precalculus' %}">Go Back</a>
+    </header>
+    <div class="section">
+      <img src="{% static 'precalculus/exponential/triangle.png' %}" alt="rigth triangle">
+      <ol>
+        <li>Sine</li>
+        <p>Sine is a trig function equal to the opposite side of a given angle divided by the hypotenuse</p>
+        <img src="{% static 'precalculus/exponential/sine.png' %}" alt="sin function">
+        <li>Cosine</li>
+        <p>Cosine is a trig function equal to the ratio of the adjacent side of a given angle by the hypotenuse</p>
+        <img src="{% static 'precalculus/exponential/cosine.png' %}" alt="cosine function">
+        <li>Tangent</li>
+        <p>Tangent is another trig function equal to the ratio of the opposite side of a given angle by the adjacent side of the same angle</p>
+        <img src="{% static 'precalculus/exponential/tangent.png' %}" alt="tangent function">
+      </ol>
+      <p>Properties of cos and sine</p>
+      <img src="{% static 'precalculus/exponential/sine_cosine.png' %}" alt="properties of sine and cosine">
+      <p>Example using sine:</p>
+      <img src="{% static 'precalculus/exponential/problem_triangle.png' %}" alt="right triangle problem">
+      <p>Find the x value given that sinθ = 0.7 </p>
+      <img src="{% static 'precalculus/exponential/sine_again.png' %}" alt="sin function formula">
+      <p>Substituing values into the formula</p>
+      <img src="{% static 'precalculus/exponential/solving_sine.png' %}" alt="replacing values solving for x">
+      <p>Solving for x</p>
+      <img src="{% static 'precalculus/exponential/solution.png' %}" alt="x variable with answer">
+    </div>
+  </body>
+</html>

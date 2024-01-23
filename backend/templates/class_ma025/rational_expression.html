@@ -5,35 +5,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/linear.css' %}" >
   </head>
   <body>
-    <h1>Rational Expressions</h1>
-    <div>
-      <p>Rational expressions are fractions with polynomials on both numerator and denominator, our job is to simplify by factoring each term and simplify.</p>
-      <p>Example: </p>
-      <img src="{% static 'rational/rational_expression.png' %}">
-      <p>To solve this problem, we need 3 steps. Factor the numerator, the denominator, and cancel out whatever terms are equal</p>
-      <li>Factor the numerator</li>
-      <img src="{% static 'rational/numerator.png' %}">
-      <li>Factor the denominator</li>
-      <img src="{% static 'rational/denominator.png' %}">
-      <li>Divide both factorings</li>
-      <img src="{% static 'rational/answer.png' %}">
-      <p>Feel comfortable to solving more complex polynomials. Practice more, learn more.</p>
-    </div>
-    <h2>Least Common Denominator</h2>
-    <div>
-      <p>LCD is just the min number multiple of any pair of numbers given to us. Example: Find the LCD of 4 and 5.</p>
-      <img src="{% static 'rational/lcd.png' %}">
-      <p>LCD using variables</p>
-      <p>To find LCD usign polynomials is indispensable factoring and then figure out what to do from that. There are some special rules about factoring including terms, with next example will cover some basic rules that are used when finding the LCD. Example: Find the LCD of x^2+8x+16 and x^2+3x-4</p>
-      <img src="{% static 'rational/lcd_solved.png' %}">
-      <p>Explanation: TPS stands for Trinomial Perfect Square(this is a special product), then factor each term. Based on factorization results, LCD can be deducted. Here are a couple of rules important.</p>
-      <ol>
-        <li>If some terms are similar, choose always the one with the highest exponent</li>
-        <li>If one term appears in only one term, it is added to the lcd. And thats it.</li>
-      </ol>
-      <p>I have ommitted add and subtract Rational equations because this is part of your problem-solving and critical-thinking skills. Do not give up.</p>
+    <header>
+      <h1 class="classes">Rational Expressions</h1>
+      <a href="{% url 'ma025' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <div> 
+        <p>Rational expressions are fractions with polynomials on both numerator and denominator, our job is to simplify by factoring each term and simplify.</p>
+        <p>Example: </p>
+        <img src="{% static 'rational/rational_expression.png' %}" alt="Division of Polynomials">
+        <p>To solve this problem, we need 3 steps. Factor the numerator, the denominator, and cancel out whatever terms are equal</p>
+        <li>Factor the numerator</li>
+        <img src="{% static 'rational/numerator.png' %}" alt="Factoring numerator">
+        <li>Factor the denominator</li>
+        <img src="{% static 'rational/denominator.png' %}" alt="factoring Denominator">
+        <li>Divide both factorings</li>
+        <img src="{% static 'rational/answer.png' %}" alt="dividing factored expressions in numerator and denominator">
+        <p>Feel comfortable to solving more complex polynomials. Practice more, learn more.</p>
+      </div>
+      <h2>Least Common Denominator</h2>
+      <div>
+        <p>LCD is just the min number multiple of any pair of numbers given to us. Example: Find the LCD of 4 and 5.</p>
+        <img src="{% static 'rational/lcd.png' %}" alt="LCD table with two numbers">
+        <p>LCD using variables</p>
+        <p>To find LCD usign polynomials is indispensable factoring and then figure out what to do from that. There are some special rules about factoring including terms, with next example will cover some basic rules that are used when finding the LCD. Example: Find the LCD of x^2+8x+16 and x^2+3x-4</p>
+        <img src="{% static 'rational/lcd_solved.png' %}" alt="Finding LCD with two expressions">
+        <p>Explanation: TPS stands for Trinomial Perfect Square(this is a special product), then factor each term. Based on factorization results, LCD can be deducted. Here are a couple of rules important.</p>
+        <ol>
+          <li>If some terms are similar, choose always the one with the highest exponent</li>
+          <li>If one term appears in only one term, it is added to the lcd. And thats it.</li>
+        </ol>
+        <p>I have ommitted add and subtract Rational equations because this is part of your problem-solving and critical-thinking skills. Do not give up.</p>
+      </div>
     </div>
   </body>
 </html>

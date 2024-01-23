@@ -1,0 +1,54 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rational and Polynomial Functions</title>
+    <link rel="stylesheet" href="{% static 'styling/asymptote.css' %}" >
+  </head>
+  <body>
+    <header>
+      <h1 class="classes">Polynomial and Rational Functions</h1>
+      <a href="{% url 'precalculus' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <div> 
+        <h2>Rational Functions</h2>
+        <h3>Vertical and Horizontal Asymptotes</h3>
+        <p>There are certain rules to find the Horizontal and Vertical Asymptotes. We'll be through most of the definitions while solving examples.</p>
+        <p>Example: Find the Vertical and Horizontal Asymptotes of f(x)=(3+2x^2)/(x^2+x-6)</p>
+        <img src="{% static 'precalculus/asymptote/asymptote.png' %}" alt="Function quotiend with polynomials">
+        <p>Find the Vertical Asymptote</p>
+        <ul>
+          <li>Factor denominator. Something IMPORTANT: In some ocassions, when numerator is factored there is the case that the same number makes numerator and denominator 0. If that were the case, just ignore that point and keep going. If when factor a number only makes the denominator 0, that number is then a Vertical asymptote.</li>
+          <img src="{% static 'precalculus/asymptote/asymptote1.png' %}" alt="Factoring denominator to find vertical asymptote">
+        </ul>
+        <p>Find the Horizontal Asymptote</p>
+        <ul>
+          <li>The Horizontal Asymptote is based on the x exponents. If the highest exponent in the numerator = highest exponent in the denominator then we divide both highest terms and the coefficient resultant will be our Horizontal Asymptote</li>
+          <img src="{% static 'precalculus/asymptote/asymptote2.png' %}" alt="Function getting horizontal asymptote">
+        </ul>
+        <p>Knowing Horizontal Asymptote and Vertical Asymptote, we can predict how our function will behave.</p>
+        <img src="{% static 'precalculus/asymptote/asymptote3.png' %}" alt="Graph with horizontal and vertical asymptote">
+      </div>
+      <div>
+        <h2>Polynomial Functions</h2>
+        <p>To determine if a graph is polynomial or not, the graph must be continuous and smooth. Here are some examples.</p>
+        <img src="{% static 'precalculus/asymptote/graph.png' %}" alt="Smooth graph pointing downwards">
+        <img src="{% static 'precalculus/asymptote/graph1.png' %}" alt="smooth graph pointing upwards and downwards">
+        <img src="{% static 'precalculus/asymptote/graph2.png' %}" alt="broken graph">
+        <p>Those images are from another webpage. Ok, in this case the case f and h are smooth and continuous (no gaps, no sharp corners). The k graph has a gap in the graph which means this graph is not a polynomial.</p>
+        <p>Another question is finding the x-intercepts. Example: Fine the x-intercepts of f(x)=x^3-7x+6</p>
+        <ol>
+          <li>Factor the function:</li>
+          <img src="{% static 'precalculus/asymptote/equation_intersect.png' %}" alt="polynomial factored">
+          <li>Solve for each x</li>
+          <img src="{% static 'precalculus/asymptote/equation_intersect1.png' %}" alt="determine multiplicity and zeros in the polynomial">
+          <li>You see the intersects, and this is the real graph with the correct intersections.</li>
+          <img src="{% static 'precalculus/asymptote/equation_intersect2.png' %}" alt="graph with zeros">
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

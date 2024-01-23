@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/asymptote.css' %}" >
+  </head>
+  <body> 
+    <header>
+      <h1 class="classes">Exponential Functions</h1>
+      <a href="{% url 'precalculus' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <p>In this topic we will not be explaining or solving complex problems. If you have any questions regarding to those topics, we can set a live session. Here I will just explain the most basic regarding to logarithms and exponential.</p>
+      <p>Algorithms and exponents are the opposite sign, we can express logarithm in terms of exponential and viceversa</p>
+      <img src="{% static 'precalculus/exponential/exp_log.png' %}" alt="log property to exponential form">
+      <p>Example:</p>
+      <img src="{% static 'precalculus/exponential/exp_log1.png' %}" alt="examples of log and exp">
+      <p>When dealing with algorithms, there is a way to expand an algorithm which we will review now. The expand function is to break a single logarithm into its individual components</p>
+      <p>Here are a few of the most common rules of logarithms</p>
+      <img src="{% static 'precalculus/exponential/logarithm_law.png' %}" alt="laws of logarithms">
+      <p>Now lets break some logarithms</p>
+      <div>
+        <p>Problem 1</p>
+        <img src="{% static 'precalculus/exponential/logarithm_problem.png' %}" alt="log problem with 13xy inside">
+        <p>Solution</p>
+        <img src="{% static 'precalculus/exponential/logarithm_problem1.png' %}" alt="development of log problem">
+        <p>Problem 2</p>
+        <img src="{% static 'precalculus/exponential/logarithm_problem2.png' %}" alt="another problem of log">
+        <p>Solution</p>
+        <img src="{% static 'precalculus/exponential/logarithm_problem3.png' %}" alt="log function expanded">
+        <p>Problem 3</p>
+        <img src="{% static 'precalculus/exponential/logarithm_problem4.png' %}" alt="problem 3 using logs">
+        <p>Solution</p>
+        <img src="{% static 'precalculus/exponential/logarithm_problem5.png' %}" alt="logarithm function expanded">
+      </div>
+      <p>It is up to you to understand how the logarithm expanding method works. By looking at these examples is easier to notice what is going on.</p>
+    </div>
+  </body>
+</html>

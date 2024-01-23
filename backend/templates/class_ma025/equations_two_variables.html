@@ -5,50 +5,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/linear.css' %}" >
   </head>
   <body>
-    <h1>Equations with two variables</h1>
-    <p>In this topic we will be using equations into our cartesian system to graph functions. Let's start, suppose my professor gives me the equation y=3x-1. How would you do it?</p>
-    <p>These are the steps to follow:</p>
-    <ol>
-      <li>Create a table, this table will contain at least 3 points</li>
-      <img src="{% static 'inequality/table.png' %}">
-      <li>The coordinates are (-1,-4),(0,-1), and (1,2). Locate those points in a cartesian plane and join them with a line.</li>
-      <img src="{% static 'inequality/line_graph.png' %}">
-      <p>This is it. This is how you graph an equation with two variables. I have a question for you, based on this information calculate the graph of the following line 3x + y = 3.</p>
-    </ol>
-    <h2>Calculate slope</h2>
-    <p>Slope in the inclination of a line. We can calculate with this method in a few seconds by just looking the graph</p>
-    <img src="{% static 'inequality/graph_slope.png' %}">
-    <p>Notice that there are two points, this makes easier to find the slope in the line. Now, the line is pointing upwards which means the slope is positive. Then, we find the difference between those two points in the x axis and the y axis.</p>
-    <img src="{% static 'inequality/graph_slope1.png' %}">
-    <p>If you see, the difference between the those two points in the x axis is 2 and the y axis is still 2.</p>
-    <img src="{% static 'inequality/graph_slope2.png' %}">
-    <p>This formula is fundamental because to find the slope is just the division between the difference of those two points in the y axis divided by the difference of x axis. In this case is 2/2 which is equal 1.</p>
-    <h2>Find slope with two points</h2>
-    <p>For this situation, if in a given problem they give us two points, we can use the following formula.</p>
-    <img src="{% static 'inequality/slope_formula.png' %}">
-    <p>Example: Find the slope of the points (3,4) and (5,7).</p>
-    <ol>
-      <li>Make any of the points p1 and the other p2</li>
-      <img src="{% static 'inequality/point1_slope.png' %}">
-      <img src="{% static 'inequality/point2_slope.png' %}">
-      <li>Now we have defined our points and our coordinates, it is time to substitute in our slope formula</li>
-      <img src="{% static 'inequality/slope_calculation.png' %}">
-    </ol>
-    <h2>Slope-Intercept Form</h2>
-    <p>This is the slope intercept formula.  y= mx + b </p>
-    <p>This small formula is really important because is equation of the line when we leave y isolated.
-      <li> m stands for slope</li>
-      <li> b is the y-intercept when x=0</li>
-    </p>
-    <p>In this situation, the slope is given to us. Example: Given m=1/3 and b=4, find the graph</p>
-    <li>Lets find first the y interception. In this case is 4.</li>
-    <img src="{% static 'inequality/slope_intercept.png' %}">
-    <p>From that point, use your slope to find the next point. The slope is positive, which means the line is pointing upwards </p>
-    <p>According to the example, the slope is 1/3 meaning 1 unit up and three units to the right.</p>
-    <img src="{% static 'inequality/slope_intercept1.png' %}">
-    <p>Join the points. And you have your graph.</p>
-    <img src="{% static 'inequality/slope_intercept2.png' %}">
+    <header>
+      <h1 class="classes">Equations with two variables</h1>
+      <a href="{% url 'ma025' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <p>In this topic we will be using equations into our cartesian system to graph functions. Let's start, suppose my professor gives me the equation y=3x-1. How would you do it?</p>
+      <p>These are the steps to follow:</p>
+      <ol>
+        <li>Create a table, this table will contain at least 3 points</li>
+        <img src="{% static 'inequality/table.png' %}" alt="table with function">
+        <li>The coordinates are (-1,-4),(0,-1), and (1,2). Locate those points in a cartesian plane and join them with a line.</li>
+        <img src="{% static 'inequality/line_graph.png' %}" alt="graph containing 3 points">
+        <p>This is it. This is how you graph an equation with two variables. I have a question for you, based on this information calculate the graph of the following line 3x + y = 3.</p>
+      </ol>
+      <h2>Calculate slope</h2>
+      <p>Slope in the inclination of a line. We can calculate with this method in a few seconds by just looking the graph</p>
+      <img src="{% static 'inequality/graph_slope.png' %}" alt="graph with two points">
+      <p>Notice that there are two points, this makes easier to find the slope in the line. Now, the line is pointing upwards which means the slope is positive. Then, we find the difference between those two points in the x axis and the y axis.</p>
+      <img src="{% static 'inequality/graph_slope1.png' %}" alt="difference between two points in x and y coordinates">
+      <p>If you see, the difference between the those two points in the x axis is 2 and the y axis is still 2.</p>
+      <img src="{% static 'inequality/graph_slope2.png' %}" alt="calculating slope">
+      <p>This formula is fundamental because to find the slope is just the division between the difference of those two points in the y axis divided by the difference of x axis. In this case is 2/2 which is equal 1.</p>
+      <h2>Find slope with two points</h2>
+      <p>For this situation, if in a given problem they give us two points, we can use the following formula.</p>
+      <img src="{% static 'inequality/slope_formula.png' %}" alt="slope formula with two points">
+      <p>Example: Find the slope of the points (3,4) and (5,7).</p>
+      <ol>
+        <li>Make any of the points p1 and the other p2</li>
+        <img src="{% static 'inequality/point1_slope.png' %}" alt="point p1">
+        <img src="{% static 'inequality/point2_slope.png' %}" alt="point p2">
+        <li>Now we have defined our points and our coordinates, it is time to substitute in our slope formula</li>
+        <img src="{% static 'inequality/slope_calculation.png' %}" alt="Replacing points in slope formula">
+      </ol>
+      <h2>Slope-Intercept Form</h2>
+      <p>This is the slope intercept formula.  y= mx + b </p>
+      <p>This small formula is really important because is equation of the line when we leave y isolated.
+        <li> m stands for slope</li>
+        <li> b is the y-intercept when x=0</li>
+      </p> 
+      <p>In this situation, the slope is given to us. Example: Given m=1/3 and b=4, find the graph</p>
+      <li>Lets find first the y interception. In this case is 4.</li>
+      <img src="{% static 'inequality/slope_intercept.png' %}" alt="graph containing y intercept">
+      <p>From that point, use your slope to find the next point. The slope is positive, which means the line is pointing upwards </p>
+      <p>According to the example, the slope is 1/3 meaning 1 unit up and three units to the right.</p>
+      <img src="{% static 'inequality/slope_intercept1.png' %}" alt="graph with measures to find next point">
+      <p>Join the points. And you have your graph.</p>
+      <img src="{% static 'inequality/slope_intercept2.png' %}" alt="graph with line">
+    </div>
   </body>
 </html>

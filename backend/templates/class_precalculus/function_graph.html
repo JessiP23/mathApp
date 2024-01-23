@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Function and Graph</title>
+    <link rel="stylesheet" href="{% static 'styling/asymptote.css' %}" >
+  </head>
+  <body>
+    <header>
+      <h1 class="classes">Functions and Graphs</h1>
+      <a href="{% url 'precalculus' %}" class="link">Go Back</a>
+    </header> 
+    <div class="section">
+      <h2>Graphing functions</h2>
+      <h3>Odd Functions</h3>
+      <p>An odd function follows the next rule: -f(x)=f(-x). Example: </p>
+      <img src="{% static 'precalculus/graphs/odd function.png' %}" alt="Odd function proved by replacing sign">
+      <p>An even function follows the next rule: f(x)=f(-x). Example: </p>
+      <img src="{% static 'precalculus/graphs/even_function.png' %}" alt="even function proved">
+      <p>The following graph gives a more closed overview in the functions topic at college.</p>
+      <img src="{% static 'precalculus/graphs/graph.png' %}" alt="parabola with vertex and endpoints">
+      <p>Some of questions are:</p>
+      <ol>
+        <li>Find the domain: The domain is in the interval [-2,2] </li>
+        <li>Find the range: The range is in the interval [-4,4]</li>
+        <li>What are the y intercepts: (0,4)</li>
+        <li>What are the x intercepts: (-2,0) and (2,0)</li>
+      </ol>
+      <img src="{% static 'precalculus/graphs/graph1.png' %}" alt="parabola with parts">
+      <ol>
+        <li>Find the interval of decrease: The interval is from [-2,-4] to (0,4) </li>
+        <li>Find the interval where f is increasing: The interval is from (0,4) to [2,-4]</li>
+      </ol>
+      <img src="{% static 'precalculus/graphs/graph2.png' %}" alt="increase and decrease intervals in parabola">
+      <p>Those are some of the common questions you will be encountering in your precalculus class. Please remember what the y and x intercepts are. Thank you.</p>
+    </div>
+  </body>
+</html>

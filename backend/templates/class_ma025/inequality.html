@@ -5,26 +5,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/linear.css' %}" >
   </head>
   <body>
-    <h1>Inequalities</h1>
-    <p>Hello!</p>
-    <p>In inequalities, there is going to be just a few examples to exemplify the importance of inequalities in Math. Later on, you will need this knowledge for future challenging problems. For now, enjoy what you are about to see. Example:</p>
-    <img src="{% static 'inequality/inequality.png' %}">
-    <p>No special treatment. The >= sign is not different than the = sign. Solve it as if it were a normal equation. </p>
-    <img src="{% static 'inequality/inequality1.png' %}">
-    <p>Special Treatment. In this situation, when we are dividing numbers with negative sign in inequalities, evertyhing changes. The orientation changes and we divide normally.</p>
-    <img src="{% static 'inequality/inequality2.png' %}">
-    <img src="{% static 'inequality/inequality3.png' %}">
-    <img src="{% static 'inequality/inequality4.png' %}">
-    <p>Our solution is an entire set of numbers that are less or equal than -3. This is how looks like in a graph to better exemplify the solution.</p>
-    <img src="{% static 'inequality/inequality5.png' %}">
-    <h3>Example 2:</h3>
-    <img src="{% static 'inequality/inequality_.png' %}">
-    <img src="{% static 'inequality/inequality_1.png' %}">
-    <img src="{% static 'inequality/inequality_2.png' %}">
-    <img src="{% static 'inequality/inequality_3.png' %}">
-    <img src="{% static 'inequality/inequality_4.png' %}">
-    <p>Notes: In this example notice the > orientation did not change, this is because x has no - sign. So we solve this equation as if it were a regular equation. The dotted line in the graph means that 1/3 is not included in the solution, it is just a reference to our set of solutions.</p>
+    <header> 
+      <h1 class="classes">Inequalities</h1>
+      <a href="{% url 'ma025' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <p>Hello!</p>
+      <p>In inequalities, there is going to be just a few examples to exemplify the importance of inequalities in Math. Later on, you will need this knowledge for future challenging problems. For now, enjoy what you are about to see. Example:</p>
+      <img src="{% static 'inequality/inequality.png' %}" alt="Inequality expression with >= as the initial orientation">
+      <p>No special treatment. The >= sign is not different than the = sign. Solve it as if it were a normal equation. </p>
+      <img src="{% static 'inequality/inequality1.png' %}" alt="isolating the term containing variable">
+      <p>Special Treatment. In this situation, when we are dividing numbers with negative sign in inequalities, evertyhing changes. The orientation changes and we divide normally.</p>
+      <img class="image" src="{% static 'inequality/inequality2.png' %}" alt="dividing inequality expression with negative number">
+      <img class="image" src="{% static 'inequality/inequality3.png' %}" alt="simplifying division">
+      <img class="image" src="{% static 'inequality/inequality4.png' %}" alt="inequality expression solved">
+      <p>Our solution is an entire set of numbers that are less or equal than -3. This is how looks like in a graph to better exemplify the solution.</p>
+      <img src="{% static 'inequality/inequality5.png' %}" alt="graph determining solution of inequality in the example above">
+      <h3>Example 2:</h3>
+      <img class="image" src="{% static 'inequality/inequality_.png' %}" alt="second example of inequality expression">
+      <img class="image" src="{% static 'inequality/inequality_1.png' %}" alt="step 1 in solving inequality expression">
+      <img class="image" src="{% static 'inequality/inequality_2.png' %}" alt="3x>1">
+      <img class="image" src="{% static 'inequality/inequality_3.png' %}" alt="x>1/3">
+      <img class="image" src="{% static 'inequality/inequality_4.png' %}" alt="graph showing solution of expression">
+      <p>Notes: In this example notice the > orientation did not change, this is because x has no - sign. So we solve this equation as if it were a regular equation. The dotted line in the graph means that 1/3 is not included in the solution, it is just a reference to our set of solutions.</p>
+    </div>
   </body>
 </html>

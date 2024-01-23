@@ -38,3 +38,37 @@ def radical(request):
 
 def quadratic(request):
     return render(request, 'class_ma025/quadratic.html')
+
+def function_graph(request):
+    return render(request, 'class_precalculus/function_graph.html')
+
+def polynomial_function(request):
+    return render(request, 'class_precalculus/polynomial_function.html')
+
+def exponential_function(request):
+    return render(request, 'class_precalculus/exponential_function.html')
+
+def trig_function(request):
+    return render(request, 'class_precalculus/trig_function.html')
+
+def sine_and_cosine(request):
+    return render(request, 'class_precalculus/sine_and_cosine.html')
+
+def conic_section(request):
+    return render(request, 'class_precalculus/conic_section.html')
+
+def function_and_graph(request):
+    return render(request, 'class_calculusI/function_and_graph.html')
+
+def limit(request):
+    return render(request, 'class_calculusI/limit.html')
+
+def derivative(request):
+    return render(request, 'class_calculusI/derivative.html')
+
+def derivative_application(request):
+    return render(request, 'class_calculusI/derivative_application.html')
+
+def integration(request):
+    return render(request, 'class_calculusI/integration.html')
+

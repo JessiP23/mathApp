@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/derivative.css' %}" >
+  </head> 
+  <body> 
+    <header>
+      <h1 class="classes">Limits</h1>
+      <a href="{% url 'calculusI' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <p>Limits are fundamental in calculus, limit is a term that describes how a function/graph behaves near a specific point. This concept personally drawn my attention to learn more and discuss why was it so important for calculus. Now, I am going to give you some examples to demonstrate some concepts and get more into depth when learning new and confusing concepts. </p>
+      <p>Suppose the professor posts a graph in the board and asks us to determine the limit at a specific point. Let's see the graph:</p>
+      <img src="{% static 'calculus/limit/limit.png' %}" alt="Graph with point">
+      <p>Personally, when solving two sided limits, I always place the point in a line and determine the direction of the - and +, so in this way when prof ask me the orientation I know that side to take</p>
+      <img src="{% static 'calculus/limit/limit1.png' %}" alt="two side orientation">
+      <p>Using our orientation, we know the number that the - and + orientation is when getting closer to the point. </p>
+      <img src="{% static 'calculus/limit/limit2.png' %}" alt="orientation applied on point">
+      <p>If both of our limits are the same, means the limit exists.</p>
+      <img src="{% static 'calculus/limit/limit3.png' %}" alt="lim applied to function">
+      <p>Our professor now switches the image, and this is the image now. She asks us to find certain limits.</p>
+      <img src="{% static 'calculus/limit/exercise_limit.png' %}" alt="two-side limit in graph">
+      <p>The first is to divide our both orientations to know which direction the graph gets closer to 2 and pick the negative.</p>
+      <img src="{% static 'calculus/limit/exercise_limit1.png' %}" alt="left side limit">
+      <p>Now pick the positive orientation</p>
+      <img src="{% static 'calculus/limit/exercise_limit2.png' %}" alt="right side limit">
+      <p>If both of our sides are the same, then our limit exists. In this case, our limits are not the same which conducts to a DNE.</p>
+      <img src="{% static 'calculus/limit/exercise_limit3.png' %}" alt="DNE limit ">
+      <section>
+        <h3>Evaluating limits by using functions</h3>
+        <p>Calculate the following limit:</p>
+        <img src="{% static 'calculus/limit/limit_problem.png' %}" alt="limit exercise">
+        <p>In this situation, just substitute the value x into the function</p>
+        <img src="{% static 'calculus/limit/limit_problem1.png' %}" alt="limit solved">
+      </section>
+    </div>
+  </body>
+</html> 

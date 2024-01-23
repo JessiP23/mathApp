@@ -1,11 +1,24 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/precalculus.css' %}" >
   </head>
   <body>
-    <h1>This is the precalculus class</h1>
+    <header>
+      <h1 class="classes">This is the precalculus class</h1>
+      <a href="{% url 'classes' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <a id="text" href="{% url 'class:function_graph' %}" class="class">Functions and graphs</a>
+      <a id="text" href="{% url 'class:polynomial_function' %}" class="class">Polynomial and Rational Functions</a>
+      <a id="text" href="{% url 'class:exponential_function' %}" class="class">Exponential and Logarithmic Functions</a>
+      <a id="text" href="{% url 'class:trig_function' %}" class="class">Trigonometric Functions</a>
+      <a id="text" href="{% url 'class:sine_and_cosine' %}" class="class">Law of Sines and Cosines</a>
+      <a id="text" href="{% url 'class:conic_section' %}" class="class">Conic sections</a>
+    </div>
   </body>
 </html>

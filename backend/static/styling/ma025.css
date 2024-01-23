@@ -1,0 +1,45 @@
+body{
+    background: linear-gradient(to bottom, #800080, #b080b0);
+    color: #d3d3d3;
+    margin: 0;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.classes{
+    flex-grow: 1;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #d3d3d3; 
+    color: #800080;
+    font-size: 25px;
+}
+
+.section a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #d3d3d3;
+}
+
+.section a:hover{
+    color: #555555;
+}
+
+#text{
+    margin: 1%;
+}

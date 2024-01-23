@@ -1,0 +1,36 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/asymptote.css' %}" >
+  </head>
+  <body> 
+    <header>
+      <h1 class="classes">Law of Sine and Cosine</h1>
+      <a href="{% url 'precalculus' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <h2>Law of Cosines</h2>
+      <img src="{% static 'precalculus/trigonometry/cosine_law.png' %}" alt="law of cosines">
+      <h2>Law of Sines</h2>
+      <img src="{% static 'precalculus/trigonometry/sine_law.png' %}" alt="law of sines">
+      <p>Example using Law of Sines. Calculate c</p>
+      <img src="{% static 'precalculus/trigonometry/triangle_sine.png' %}" alt="triangle with angles and some measuers">
+      <p>By looking the triangle notice there is the B angle of 35 degrees and b side of 7, then there is angle C of 105 and c measure unknown.</p>
+      <img src="{% static 'precalculus/trigonometry/half_sine_law.png' %}" alt="law of sines for b and c">
+      <img src="{% static 'precalculus/trigonometry/half_sine_law1.png' %}" alt="law of sines solving for c">
+      <p>Solving for c</p>
+      <img src="{% static 'precalculus/trigonometry/half_sine_law2.png' %}" alt="c value found in expression">
+      <img src="{% static 'precalculus/trigonometry/half_sine_law3.png' %}" alt="c answer">
+      <h2>Law of Cosines</h2>
+      <img src="{% static 'precalculus/trigonometry/cosine_triangle.png' %}" alt="triangle with measures and angle">
+      <p>This is the formula to use to find the desired value</p>
+      <img src="{% static 'precalculus/trigonometry/cosine_law_c.png' %}" alt="cosines law">
+      <img src="{% static 'precalculus/trigonometry/cosine_law_c1.png' %}" alt="cosines law with values replaced">
+      <img src="{% static 'precalculus/trigonometry/cosine_law_c2.png' %}" alt="C answer">
+    </div>
+  </body>
+</html> 

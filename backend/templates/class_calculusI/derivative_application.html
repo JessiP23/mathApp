@@ -1,0 +1,37 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/derivative.css' %}" >
+  </head>
+  <body>
+    <header>
+      <h1 class="classes">Derivative applications</h1>
+      <a href="{% url 'calculusI' %}" class="link">Go Back</a>
+    </header> 
+      <div class="section">
+        <p>One of the main applications when working with derivatives is to find the Absolute Maximum and Absolute Minimum.</p>
+        <p>Example: Find absolute maximum and absolute minimum over the interval.</p>
+        <li>f(x)=x^2-3x over [2,4]</li>
+        <img src="{% static 'calculus/derivative_application/absolute.png' %}" alt="expression">
+        <img src="{% static 'calculus/derivative_application/absolute1.png' %}" alt="expression calculating x for interval">
+        <img src="{% static 'calculus/derivative_application/absolute2.png' %}" alt="Absolute maxima and minima">
+        <p>This is an Absolute maximum and Absolute Minimum exercise, your job is to review this exercise and understand the why of each step. Once you are able to understand each step, similar exercises will be proven to be easier to master. Good luck!!!</p>
+        <p>One important topic to show is the L'Hopital's Rule. This rule allows us to evaluate limits when there is a quotient of two functions.</p>
+        <p>Example: </p>
+        <img src="{% static 'calculus/derivative_application/lhopital.png' %}" alt="Limit example">
+        <img src="{% static 'calculus/derivative_application/lhopital1.png' %}" alt="L'Hopital rule">
+        <img src="{% static 'calculus/derivative_application/lhopital2.png' %}" alt="Limit solved with answer">
+        <p>Some other important applications of derivatives are: </p>
+        <ul>
+          <li>Related Rates</li>
+          <li>Newton's Method</li>
+          <li>Antiderivative</li>
+          <li>Mean Value Theorem</li>
+        </ul>
+      </div>
+  </body>
+</html> 

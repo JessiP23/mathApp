@@ -1,0 +1,69 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/asymptote.css' %}" >
+  </head> 
+  <body>
+    <header>
+      <h1 class="classes">Conic Section</h1>
+      <a href="{% url 'precalculus' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <p>There are four primary conic sections: Circle, parabola, ellipse and hyperbola. Their equations for those are the following: </p>
+      <div>
+        <p><strong>Circle: </strong></p>
+        <img src="{% static 'precalculus/conic_section/circle_equation.png' %}" alt="circle equation formula">
+        <p>(h,k) is the center and r the radius</p>
+      </div>
+      <div>
+        <p><strong>Ellipse: </strong></p>
+        <img src="{% static 'precalculus/conic_section/ellipse.png' %}" alt="ellipse equation formula">
+        <p>If a > b, the ellipse stretches in the horizontal direction. If b > a, the ellipse stretches in the vertical direction.</p>
+        <h3>If a > b</h3>
+        <ol>
+          <li>Major axis: 2a</li>
+          <li>vertices: (0, ±a)</li>
+          <li>Minor axis: 2b</li>
+          <li>Co-vertices: (±b, 0) </li>
+          <li>Foci: (0, ±c)</li>
+        </ol>
+        <img src="{% static 'precalculus/conic_section/ellipse_parts.png' %}" alt="ellipse with parts">
+      </div>
+      <div>
+        <p><strong>Hyperbola: </strong></p>
+        <img src="{% static 'precalculus/conic_section/hyperbola.png' %}" alt="Hyperbola equation formula">
+        <br />
+        <img src="{% static 'precalculus/conic_section/hyperbola_graph.png' %}" alt="hyperbola graph with components">
+      </div>
+      <div>
+        <p><strong>Parabola: </strong></p>
+        <img src="{% static 'precalculus/conic_section/parabola_equation.png' %}" alt="parabola equation formula">
+        <img src="{% static 'precalculus/conic_section/parabola_graph.png' %}" alt="parabola graphs with different orientations">
+      </div>
+      <div>
+        <h3>Example:</h3>
+        <p>Give the coordinates of the circle's center and its radius.</p>
+        <img src="{% static 'precalculus/conic_section/exercise.png' %}" alt="circle example equation">
+        <p>Solution: </p>
+        <p>X contains the x coordinate and y the y coordinate. In this case, we equal each term to 0.</p>
+        <img src="{% static 'precalculus/conic_section/exercise1.png' %}" alt="circle standard formula">
+        <p>The radius and center are:</p>
+        <img src="{% static 'precalculus/conic_section/exercise2.png' %}" alt="circle standard formula and origin and radius">
+      </div>
+      <p>Quick Example with Parabola</p>
+      <p>Graph the parabola and identify the focus, directriz, vertex, and axis of symmetry</p>
+      <p>y^2=25x</p>
+      <ol>
+        <li>Vertex: (0,0)</li>
+        <li>Focus: (5,0)</li>
+        <li>Directriz: x=-5</li>
+        <li>Axis of symmetry: y=0</li>
+      </ol>
+      <img src="{% static 'precalculus/conic_section/graph_exercise.png' %}" alt="Parabola graphpointing to the right">
+    </div>
+  </body>
+</html>

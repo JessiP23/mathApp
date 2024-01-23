@@ -5,42 +5,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/linear.css' %}" >
   </head>
   <body>
-    <h1>Polynomials</h1>
-    <div>
-      <p>Polynomials are expressions that contain 3 or more terms. Let's start with an example by using numeric substitution.</p>
-      <img src="{% static 'polynomial/polynomials_numeric.png' %}">
-      <p>Here is the solution</p>
-      <img src="{% static 'polynomial/polynomials_numeric1.png' %}">
-    </div>
-    <div>
-      <h3>Combining terms</h3>
-      <p>Remember when combining terms, the way you join is when the variables or letter are the identical. Then you can add/subtract them.</p>
-      <img src="{% static 'polynomial/combining_terms.png' %}">
-      <p>First multiply and solve parenthesis.</p>
-      <img src="{% static 'polynomial/combining_terms1.png' %}">
-      <p>Solve and simplify</p>
-      <img src="{% static 'polynomial/combining_terms2.png' %}">
-      <p>The answer is:</p>
-      <img src="{% static 'polynomial/combining_terms3.png' %}">
-    </div>
-    <div>
-      <h3>Multiplying Polynomials</h3>
-      <p>When multiplying polynomials just keep in mind the exponents and the variables you are multiplying. After understanding the difference between multiplying and adding polynomials you are in excellent shape.</p>
-      <img src="{% static 'polynomial/multiply_polynomial.png' %}">
-      <p>Distributing 3y^3 to the whole expression in parenthesis.</p>
-      <img src="{% static 'polynomial/multiply_polynomial1.png' %}">
-    </div>
-    <div>
-      <h3>Dividing Polynomials</h3>
-      <p>Here is a simple example to show division between 2 polynomials.</p>
-      <p>Let's divide (4x^3+2x^2+12x)/(2x)</p>
-      <img src="{% static 'polynomial/division_polynomial.png' %}">
-      <p>There are two mainly ways to express division of polynomials</p>
-      <img src="{% static 'polynomial/division_polynomial1.png' %}">
-      <p>Either division is correct. Let's use the first type.</p>
-      <img src="{% static 'polynomial/division_polynomial2.png' %}">
+    <header>
+      <h1 class="classes">Polynomials</h1>
+      <a href="{% url 'ma025' %}" class="link">Go Back</a>
+    </header> 
+    <div class="section">
+      <div>
+        <p>Polynomials are expressions that contain 3 or more terms. Let's start with an example by using numeric substitution.</p>
+        <img src="{% static 'polynomial/polynomials_numeric.png' %}" alt="polynomial with x value">
+        <p>Here is the solution</p>
+        <img src="{% static 'polynomial/polynomials_numeric1.png' %}" alt="expression solved using numerical value">
+      </div>
+      <div>
+        <h3>Combining terms</h3>
+        <p>Remember when combining terms, the way you join is when the variables or letter are the identical. Then you can add/subtract them.</p>
+        <img src="{% static 'polynomial/combining_terms.png' %}" alt="two expression with operations">
+        <p>First multiply and solve parenthesis.</p>
+        <img src="{% static 'polynomial/combining_terms1.png' %}" alt="expressions combined">
+        <p>Solve and simplify</p>
+        <img src="{% static 'polynomial/combining_terms2.png' %}" alt="simplifying similar terms">
+        <p>The answer is:</p>
+        <img src="{% static 'polynomial/combining_terms3.png' %}" alt="answer to the previous exercise">
+      </div>
+      <div>
+        <h3>Multiplying Polynomials</h3>
+        <p>When multiplying polynomials just keep in mind the exponents and the variables you are multiplying. After understanding the difference between multiplying and adding polynomials you are in excellent shape.</p>
+        <img src="{% static 'polynomial/multiply_polynomial.png' %}" alt="multiplication of polynomials">
+        <p>Distributing 3y^3 to the whole expression in parenthesis.</p>
+        <img src="{% static 'polynomial/multiply_polynomial1.png' %}" alt="distributive property">
+      </div>
+      <div>
+        <h3>Dividing Polynomials</h3>
+        <p>Here is a simple example to show division between 2 polynomials.</p>
+        <p>Let's divide (4x^3+2x^2+12x)/(2x)</p>
+        <img src="{% static 'polynomial/division_polynomial.png' %}" alt="division of polynomials">
+        <p>There are two mainly ways to express division of polynomials</p>
+        <img src="{% static 'polynomial/division_polynomial1.png' %}" alt="methods to write a division of polynomials">
+        <p>Either division is correct. Let's use the first type.</p>
+        <img src="{% static 'polynomial/division_polynomial2.png' %}" alt="answer of division of polynomials">
+      </div>  
     </div>
   </body>
 </html>

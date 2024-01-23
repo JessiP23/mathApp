@@ -5,58 +5,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/linear.css' %}" >
   </head>
   <body>
-    <h1>Factoring</h1>
-    <h2>Greatest Common Factor</h2>
-    <p>The GCF is the max number that divides a certain pair of numbers. Example: Find the GCF of 32, 44, 20</p>
-    <p>The max number that divides these three numbers is 4. Prove it by yourself. This is an idea and your job is to understand why is it 4.</p>
-    <p>Working with terms is slightly different. For example: Find the GCF of 10x^3y, 5yx, 20x^2</p>
-    <ol>
-      <li>Find GCF of coeficient(numbers)</li>
-      <img src="{% static 'factoring/gcf.png' %}">
-      <li>Focus on each variable that is in those three terms</li>
-      <img src="{% static 'factoring/gcf1.png' %}">
-    </ol>
-    <p><strong>IMPORTANT</strong></p>
-    <p>When working with terms including variables, the variable present in all terms is part of the gcf. In this case we have x. To find the correct exponent, the answer is this exponent which is the lowest. The first term has exponent 3, the second is 1, the third is 2.</p>
-    <img src="{% static 'factoring/gcf2.png' %}">
-    <p>Finally, include everything in your answer. The GCF of these terms is 5x</p>
-    <h2>Factoring by grouping</h2>
-    <p>Factoring by GCF is the most common way to factor when learning to factor in general. Here is an example: Factor by gropuping 5xyz + 10xy</p>
-    <ol>
-      <li>Remember to factor the coefficients first, the GCF of 5 and 10 is 5. If you do not understand at all set a session with me.</li>
-      <img src="{% static 'factoring/example_gcf.png' %}">
-      <li>Look those variables that are in all terms</li>
-      <img src="{% static 'factoring/example_gcf1.png' %}">
-      <li>Finally, paste your final GCF which is 5xy</li>
-      <li>When you have your GCF, something magical happen. Now divide your original expression with the GCF.</li>
-      <img src="{% static 'factoring/example_gcf2.png' %}">
-      <p>Which is the same to</p>
-      <img src="{% static 'factoring/example_gcf3.png' %}">
-      <p>GREAT!, we almost done. Breathe and keep going. You can make it.</p>
-      <p>As final step, multiply the GCF with the answer in the division.</p>
-      <img src="{% static 'factoring/example_gcf3.png' %}">
-      <p>This is the final answer, hope you can make it to this point. If you did, your learning is getting so much better. Do not forget to practice questions on your own, and if at the end you don't understand ask me through the live sessions.</p>
-    </ol>
-    <p>An important part when factoring is the Special products. I have brought a list of the most common special products.</p>
-    <img src="{% static 'factoring/special_products.png' %}">
-    <p>Let's solve one question regarding the special product</p>
-    <p>Factor the following expression: 4x^2 - 9y^2</p>
-    <img src="{% static 'factoring/special_product.png' %}">
-    <img src="{% static 'factoring/special_product1.png' %}">
-    <img src="{% static 'geometry/the_rock.png' %}">
-    <ol>
-      <li>The rule says we need to find the root of each term. </li>
-      <img src="{% static 'factoring/square_root.png' %}">
-      <p>Same for b</p>
-      <img src="{% static 'factoring/square_root1.png' %}">
-      <li>Finally, replace into the special product rule
-        <img src="{% static 'factoring/special_product1.png' %}">
-        <img src="{% static 'factoring/factor_special.png' %}">
-      </li>
-      <p>This is how in 3 steps we managed to factorize a special product. Try factoring usign the other special products methods. Good luck!!!</p>
-    </ol>
-    <p>I have saved the trinomial factorization just to teach in live session. This requires a little more practice and I belive that the best to learn factorization is by teaching live.</p>
+    <header> 
+      <h1 class="classes">Factoring</h1>
+      <a href="{% url 'ma025' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <h2>Greatest Common Factor</h2>
+      <p>The GCF is the max number that divides a certain pair of numbers. Example: Find the GCF of 32, 44, 20</p>
+      <p>The max number that divides these three numbers is 4. Prove it by yourself. This is an idea and your job is to understand why is it 4.</p>
+      <p>Working with terms is slightly different. For example: Find the GCF of 10x^3y, 5yx, 20x^2</p>
+      <ol>
+        <li>Find GCF of coeficient(numbers)</li>
+        <img src="{% static 'factoring/gcf.png' %}" alt="three terms with variables">
+        <li>Focus on each variable that is in those three terms</li>
+        <img src="{% static 'factoring/gcf1.png' %}" alt="same terms localizing their similar variables">
+      </ol>
+      <p><strong>IMPORTANT</strong></p>
+      <p>When working with terms including variables, the variable present in all terms is part of the gcf. In this case we have x. To find the correct exponent, the answer is this exponent which is the lowest. The first term has exponent 3, the second is 1, the third is 2.</p>
+      <img src="{% static 'factoring/gcf2.png' %}" alt="exponents of similar variables in three expressions">
+      <p>Finally, include everything in your answer. The GCF of these terms is 5x</p>
+      <h2>Factoring by grouping</h2>
+      <p>Factoring by GCF is the most common way to factor when learning to factor in general. Here is an example: Factor by gropuping 5xyz + 10xy</p>
+      <ol>
+        <li>Remember to factor the coefficients first, the GCF of 5 and 10 is 5. If you do not understand at all set a session with me.</li>
+        <img src="{% static 'factoring/example_gcf.png' %}" alt="calculating GCF for coefficient">
+        <li>Look those variables that are in all terms</li>
+        <img src="{% static 'factoring/example_gcf1.png' %}" alt="calculating GCF for variables">
+        <li>Finally, paste your final GCF which is 5xy</li>
+        <li>When you have your GCF, something magical happen. Now divide your original expression with the GCF.</li>
+        <img src="{% static 'factoring/example_gcf2.png' %}" alt="dividing GCF with original expression">
+        <p>Which is the same to</p>
+        <img src="{% static 'factoring/example_gcf3.png' %}" alt="solving division">
+        <p>GREAT!, we almost done. Breathe and keep going. You can make it.</p>
+        <p>As final step, multiply the GCF with the answer in the division.</p>
+        <img src="{% static 'factoring/example_gcf3.png' %}" alt="GCF solved">
+        <p>This is the final answer, hope you can make it to this point. If you did, your learning is getting so much better. Do not forget to practice questions on your own, and if at the end you don't understand ask me through the live sessions.</p>
+      </ol>
+      <p>An important part when factoring is the Special products. I have brought a list of the most common special products.</p>
+      <img src="{% static 'factoring/special_products.png' %}" alt="Common special products table">
+      <p>Let's solve one question regarding the special product</p>
+      <p>Factor the following expression: 4x^2 - 9y^2</p>
+      <img src="{% static 'factoring/special_product.png' %}" alt="special product">
+      <img src="{% static 'factoring/special_product1.png' %}" alt="rule for special product exercise">
+      <img src="{% static 'geometry/the_rock.png' %}" alt="the Rock">
+      <ol>
+        <li>The rule says we need to find the root of each term. </li>
+        <img src="{% static 'factoring/square_root.png' %}" alt="calculating square roots">
+        <p>Same for b</p>
+        <img src="{% static 'factoring/square_root1.png' %}" alt="square roots for each term">
+        <li>Finally, replace into the special product rule
+          <img src="{% static 'factoring/special_product1.png' %}" alt="special rule applied to solve problem">
+          <img src="{% static 'factoring/factor_special.png' %}" alt="problem and factored answer">
+        </li>
+        <p>This is how in 3 steps we managed to factorize a special product. Try factoring usign the other special products methods. Good luck!!!</p>
+      </ol>
+      <p>I have saved the trinomial factorization just to teach in live session. This requires a little more practice and I belive that the best to learn factorization is by teaching live.</p>
+    </div>
   </body>
 </html>

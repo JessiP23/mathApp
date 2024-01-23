@@ -5,43 +5,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/linear.css' %}" >
   </head>
   <body>
-    <h1>Quadratics</h1>
-    <p>In this section I will provide examples to exemplify the definition and leverage your problem-solving skills.</p>
-    <p>Solve for x</p>
-    <img src="{% static 'quadratic/quadratic_radical.png' %}">
-    <p>To get rid of the radical square the whole expression</p>
-    <img src="{% static 'quadratic/quadratic_radical1.png' %}">
-    <p>Squares cancel when square</p>
-    <img src="{% static 'quadratic/quadratic_radical2.png' %}">
-    <p>Isolate x</p>
-    <img src="{% static 'quadratic/quadratic_radical3.png' %}">
-    <p>Simplifying</p>
-    <img src="{% static 'quadratic/quadratic_radical4.png' %}">
-    <p>Dividing by 5</p>
-    <img src="{% static 'quadratic/quadratic_radical5.png' %}">
+    <header>
+      <h1 class="classes">Quadratics</h1>
+      <a href="{% url 'ma025' %}" class="link">Go Back</a>
+    </header> 
+    <div class="section">
+      <p>In this section I will provide examples to exemplify the definition and leverage your problem-solving skills.</p>
+      <p>Solve for x</p>
+      <img src="{% static 'quadratic/quadratic_radical.png' %}" alt="expression using radical">
+      <p>To get rid of the radical square the whole expression</p>
+      <img src="{% static 'quadratic/quadratic_radical1.png' %}" alt="squaring both terms to get rid of the radical">
+      <p>Squares cancel when square</p>
+      <img src="{% static 'quadratic/quadratic_radical2.png' %}" alt="simple 2-step expression">
+      <p>Isolate x</p>
+      <img src="{% static 'quadratic/quadratic_radical3.png' %}" alt="isolating 5x in expression">
+      <p>Simplifying</p>
+      <img src="{% static 'quadratic/quadratic_radical4.png' %}" alt="x solved in expression">
+      <p>Dividing by 5</p>
+      <img src="{% static 'quadratic/quadratic_radical5.png' %}" alt="x answer">
+      <h2>Quadratics using exponents</h2>
+      <div>
+        <img src="{% static 'quadratic/exponent_quadratic.png' %}" alt="cubic expression">
+        <p>Apply the cubic root to cancel the exponent</p>
+        <img src="{% static 'quadratic/exponent_quadratic1.png' %}" alt="process to get rid of cubic exponent">
+        <p>Simplify the coefficient inside the square root.</p>
+        <img src="{% static 'quadratic/exponent_quadratic2.png' %}" alt="answer found in expression">
+      </div>
+      <div>
+        <h2>Quadratic Formula</h2>
+        <img src="{% static 'quadratic/quadratic_formula.png' %}" alt="General quadratic Formula">
+        <p>Solve the following problem by using the quadratic formula</p>
+        <img src="{% static 'quadratic/quadratic_formula1.png' %}" alt="Quadratic expression to find solution">
+        <p>In this example, a is the number next to x^2, b is the number in the term with x, c is the number without any variable.</p>
+        <img src="{% static 'quadratic/quadratic_solution.png' %}" alt="determining a,b,c in expression">
+        <p>Substitute into the general quadratic formula</p>
+        <img src="{% static 'quadratic/quadratic_solution1.png' %}" alt="values a,b,c replaced in quadratic formula">
+        <p>Simplifying</p>
+        <img src="{% static 'quadratic/quadratic_solution2.png' %}" alt="quadratic formula simplified">
+        <p>The ± sign means there are two solutions.</p>
+        <img src="{% static 'quadratic/solution.png' %}" alt="values of x found">
+      </div>
+    </div>
   </body>
-  <h2>Quadratics using exponents</h2>
-  <div>
-    <img src="{% static 'quadratic/exponent_quadratic.png' %}">
-    <p>Apply the cubic root to cancel the exponent</p>
-    <img src="{% static 'quadratic/exponent_quadratic1.png' %}">
-    <p>Simplify the coefficient inside the square root.</p>
-    <img src="{% static 'quadratic/exponent_quadratic2.png' %}">
-  </div>
-  <div>
-    <h2>Quadratic Formula</h2>
-    <img src="{% static 'quadratic/quadratic_formula.png' %}">
-    <p>Solve the following problem by using the quadratic formula</p>
-    <img src="{% static 'quadratic/quadratic_formula1.png' %}">
-    <p>In this example, a is the number next to x^2, b is the number in the term with x, c is the number without any variable.</p>
-    <img src="{% static 'quadratic/quadratic_solution.png' %}">
-    <p>Substitute into the general quadratic formula</p>
-    <img src="{% static 'quadratic/quadratic_solution1.png' %}">
-    <p>Simplifying</p>
-    <img src="{% static 'quadratic/quadratic_solution2.png' %}">
-    <p>The ± sign means there are two solutions.</p>
-    <img src="{% static 'quadratic/solution.png' %}">
-  </div>
 </html>

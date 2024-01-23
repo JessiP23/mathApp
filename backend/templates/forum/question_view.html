@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
-    <link rel="stylesheet" href="{% static 'styling/view.css' %}" >
+    <link rel="stylesheet" href="{% static 'styling/views.css' %}" >
   </head>
   <body>
     <header>
@@ -13,13 +13,18 @@
       <a href="{% url 'forum:question_list' %}" class="link">Go Back</a>
     </header>
     <div class="section">
-      <h2>{{question.title}}</h2>
-      <p>{{question.description}}</p>
-      <p>Posted by: {{question.user.username}} | Posted at: {{question.timepost}}</p>
+      <h2 class="capital">Title: {{question.title}}</h2>
+      <p class="capital">Description: {{question.description}}</p>
+      <p class="capital">Posted by: {{question.user.username}} | Posted at: {{question.timepost}}</p>
+      <div class="image">
+        {% if question.file %}
+        <img src="{{question.file.url}}" alt="File Question Image" style="max-width: 200px; margin-bottom: 5%;">
+        {% endif %}
+      </div>
       {% for comment in question.comments.all %}
       <p>{{comment.text}}</p>
       {% endfor %}
-      <a href="{% url 'forum:create_comment' question_id=question.id %}" class="link">Add Comment</a>
+      <a href="{% url 'forum:create_comment' question_id=question.id %}" class="link" style="margin: 3%">Add Comment</a>
     </div>
   </body>
 </html>

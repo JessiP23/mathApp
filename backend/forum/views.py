@@ -9,7 +9,7 @@ def question_list(request):
 
 def post_question(request):
     if request.method=='POST':
-        form = FormatQuestion(request.POST)
+        form = FormatQuestion(request.POST, request.FILES)
         if form.is_valid():
             setquestion = form.save(commit=False)
             setquestion.user = request.user

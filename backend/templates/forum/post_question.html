@@ -5,15 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
-    <link rel="stylesheet" href="{% static 'styling/calculus.css' %}" >
+    <link rel="stylesheet" href="{% static 'styling/view.css' %}" >
   </head>
   <body>
-    <h1>Post a Question</h1>
-    <!--namespace for url forum-->
-    <form method="post" action="{% url 'forum:post_question' %}">
-      {% csrf_token %}
-      {{form.as_p}}
-      <button type="submit">Post Question</button>
-    </form>
+    <header>
+      <h1 class="classes">Post a Question</h1>
+      <a href="{% url 'forum:question_list' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <!--namespace for url forum-->
+      <form method="post" enctype="multipart/form-data" action="{% url 'forum:post_question' %}">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Post Question</button>
+      </form>
+    </div>
   </body>
 </html>

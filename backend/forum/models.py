@@ -7,3 +7,7 @@ class PostQuestion(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     timepost = models.DateTimeField(auto_now_add=True)
 
+class Comment(models.Model):
+    text = models.TextField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    question_related = models.ForeignKey(PostQuestion, related_name='comments', on_delete=models.CASCADE)

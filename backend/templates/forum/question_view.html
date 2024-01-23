@@ -16,6 +16,10 @@
       <h2>{{question.title}}</h2>
       <p>{{question.description}}</p>
       <p>Posted by: {{question.user.username}} | Posted at: {{question.timepost}}</p>
+      {% for comment in question.comments.all %}
+      <p>{{comment.text}}</p>
+      {% endfor %}
+      <a href="{% url 'forum:create_comment' question_id=question.id %}" class="link">Add Comment</a>
     </div>
   </body>
 </html>

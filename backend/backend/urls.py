@@ -26,7 +26,7 @@ urlpatterns = [
     path('logout/',views.LogoutPage,name='logout'),
     path('classes/', views.Classes_view,name="classes"),
     path('sessions/', views.Sessions_view, name="sessions"),
-    path('post/', views.Post_view, name="post"),
+    path('post/', include('forum.urls', namespace="forum")),
     path('app/', include('app.urls')),
 ] 
 

@@ -10,6 +10,7 @@ def HomePage(request):
     context = {'username': username}
     return render (request,'home.html', context)
 
+#Authentication User
 #form is submitted via POST method get username, email, passwords
 def SignupPage(request):
     if request.method=='POST':

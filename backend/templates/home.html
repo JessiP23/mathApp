@@ -207,8 +207,8 @@
         } else if (option === 'sessions'){
           window.location.href = '{% url "sessions" %}';
         } else if(option === 'post'){
-          window.location.href = "{% url 'post' %}"
-        }
+          window.location.href = "{% url 'forum:question_list' %}"
+        } 
       }
     </script>
   </body>

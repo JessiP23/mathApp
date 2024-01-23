@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/view.css' %}" >
+  </head>
+  <body>
+    <header>
+      <h1 class="classes">Question List</h1>
+      <a href="{% url 'home' %}" class="link">Home</a>
+    </header>
+    <div class="section">
+      {%for question in list_question%}
+      <div class="question">
+        <h3><a href="{% url 'forum:view_question' question.id %}">{{question.title}}</a></h3>
+        <p>{{question.description}}</p>
+        <p>Posted by: {{question.user.username}} | Posted at: {{question.timepost}}</p>
+      </div>
+      <hr>
+      {%endfor%}
+      <a href="{% url 'forum:post_question' %}">Post a new question</a>
+    </div>
+  </body>
+</html>

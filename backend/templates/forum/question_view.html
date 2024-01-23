@@ -1,0 +1,21 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/view.css' %}" >
+  </head>
+  <body>
+    <header>
+      <h1 class="classes">Question View</h1>
+      <a href="{% url 'forum:question_list' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">
+      <h2>{{question.title}}</h2>
+      <p>{{question.description}}</p>
+      <p>Posted by: {{question.user.username}} | Posted at: {{question.timepost}}</p>
+    </div>
+  </body>
+</html>

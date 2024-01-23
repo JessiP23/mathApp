@@ -1,0 +1,19 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/calculus.css' %}" >
+  </head>
+  <body>
+    <h1>Post a Question</h1>
+    <!--namespace for url forum-->
+    <form method="post" action="{% url 'forum:post_question' %}">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit">Post Question</button>
+    </form>
+  </body>
+</html>

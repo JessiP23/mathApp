@@ -28,5 +28,6 @@ urlpatterns = [
     path('derivative/', views.derivative, name="derivative"),
     path('derivative_application/', views.derivative_application, name="derivative_application"),
     path('integration/', views.integration, name="integration"),
+    path('forum/', include('forum.urls')),
 ] 
 

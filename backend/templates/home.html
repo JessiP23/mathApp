@@ -205,7 +205,7 @@
         if(option === 'classes'){
           window.location.href = '{% url "classes" %}';
         } else if (option === 'sessions'){
-          window.location.href = '{% url "sessions" %}';
+          window.location.href = '{% url "live_session:schedule_session" %}';
         } else if(option === 'post'){
           window.location.href = "{% url 'forum:question_list' %}"
         } 

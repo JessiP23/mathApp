@@ -2,7 +2,7 @@ from django.urls import path
 from .views import view_question, question_list, post_question, create_comment
 from django.conf.urls.static import static
 from django.conf import settings
-
+ 
 app_name = 'forum'
 
 urlpatterns = [

@@ -28,6 +28,7 @@ urlpatterns = [
     path('sessions/', views.Sessions_view, name="sessions"),
     path('post/', include('forum.urls', namespace="forum")),
     path('app/', include('app.urls')),
+    path('live_session/', include('live_session.urls', namespace="live_session"))
 ] 
 
 if settings.DEBUG:

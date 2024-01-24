@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'app',
     'class',
     'forum',
+    'live_session',
 ]
 
 

@@ -1,6 +1,7 @@
 from django import forms
 from .models import PostQuestion, Comment
 
+#inherited class from models that is used in templates
 class FormatQuestion(forms.ModelForm):
     class Meta:
         model = PostQuestion

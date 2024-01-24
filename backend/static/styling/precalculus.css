@@ -46,3 +46,27 @@ header{
     margin: 1%;
 }
 
+@media (max-width: 999px){
+    header{
+      font-size: 15px;
+    }
+
+    .section a{
+        font-size: 17px;
+    }
+
+    .classes {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 650px){
+    header{
+        font-size: 12px;
+    }
+
+    .classes{
+        font-size: 17px;
+    }
+}
+

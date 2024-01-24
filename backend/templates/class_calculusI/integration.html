@@ -7,11 +7,13 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="{% static 'styling/derivative.css' %}" >
   </head>
-  <body> 
+  <body>  
+    <!--Title Integrations header with link Go BAck to redirect classes page-->
     <header>
       <h1 class="classes">Integration</h1>
       <a href="{% url 'calculusI' %}" class="link">Go Back</a>
     </header>
+    <!--Content Page of title-->
     <div class="section">
       <p>In this section I will go over directly to exercises. I will skip some important topics, if you need help with any of the topics I have covered or not. Set a session live with me.</p>
       <img src="{% static 'calculus/integration/integral.png' %}" alt="Integratoin problem">

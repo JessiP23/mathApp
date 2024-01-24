@@ -7,18 +7,24 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="{% static 'styling/view.css' %}" >
   </head>
-  <body>
+  <body> 
     <header>
       <h1 class="classes">Add a comment</h1>
       <a href="{% url 'forum:view_question' question.id %}" class="link">Go Back</a>
     </header>
     <!--namespace for url forum-->
     <div class="section">
+      <!--Form added and displayed in page-->
       <form method="post" action="{% url 'forum:create_comment' question_id=question.id %}">
         {% csrf_token %}
-        {{form.as_p}}
+        <div class="form-group">
+          <label for="{{ form.subject.id_for_label }}">Comment:</label>
+          {{ form.text }}
+        </div>
+        <!--Post comment-->
         <button type="submit">Post Comment</button>
       </form>
     </div>
   </body>
 </html>
+

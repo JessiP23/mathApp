@@ -1,6 +1,7 @@
 from django.urls import path, include
 from . import views
 
+#Render math subjects and class app
 urlpatterns = [
     path('ma010/', views.ma010,name="ma010"),
     path('ma025/', views.ma025,name="ma025"),

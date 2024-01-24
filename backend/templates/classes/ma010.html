@@ -55,6 +55,16 @@
         margin: 1%;
         transition: color 0.5s;
       }
+ 
+      @media (max-width: 899px){
+        header{
+          font-size: 20px;
+        }
+        #text {
+          font-size: 25px;
+        }
+      }
+
 
     </style>
   </head>
@@ -63,6 +73,7 @@
       <h1 class="classes">MA010</h1>
       <a href="{% url 'classes' %}" class="link">Go Back</a>
     </header>
+    <!--Llist of topics in MA010 class-->
     <div class="section">
       <a id="text" href="{% url 'class:whole_number' %}" class="class class-link">Whole Numbers, fractions, decimals, percent, proportions</a>
       <a id="text" href="{% url 'class:signed_number' %}" class="class class-link">Signed numbers, Algebraic expressions</a>

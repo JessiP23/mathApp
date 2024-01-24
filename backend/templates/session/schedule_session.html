@@ -1,5 +1,5 @@
 {% load static %}
-<!doctype html>
+<!doctype html> 
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -10,14 +10,34 @@
   </head>
   <body>
     <header>
+      <!--Header with Home and SEssion list links-->
       <h1 class="classes">Schedule your session</h1>
-      <a href="{% url 'home' %}" class="link" style="margin-right: 1%;">Home</a>
-      <a href="{% url 'live_session:list_session' %}" class="link">My Session List</a>
-    </header>
+      <a href="{% url 'home' %}" class="link" style="margin-right: 2%;">Home</a>
+      <a href="{% url 'live_session:list_session' %}" class="link">Session List</a>
+    </header> 
     <div class="section">
       <form method="post" action="{% url 'live_session:schedule_session' %}">
         {% csrf_token %}
-        {{form.as_p}} 
+        <!--Individual components in forms.py-->
+        <div class="form-group">
+          <!--Calendar-->
+            <label for="{{ form.calendar.id_for_label }}">Calendar:</label>
+            {{ form.calendar }}
+        </div>
+        <div class="form-group">
+          <!--Subject choices-->
+            <label for="{{ form.subject.id_for_label }}">Subject:</label>
+            {{ form.subject }}
+        </div>
+        <div class="form-group">
+          <!--Time diagram displayed-->
+            <label for="{{ form.time_hour.id_for_label }}">Time:</label>
+            {{ form.time_hour }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.question.id_for_label }}" >Submit your questions:</label>
+            {{ form.question }}
+        </div>
         <button type="submit">Schedule session</button>
       </form>
     </div>

@@ -12,15 +12,17 @@
       <h1 class="classes">Details of your session</h1>
       <a href="{% url 'live_session:list_session' %}" class="link">Go Back</a>
     </header>
-    <div class="section">  
+    <div class="section"> 
+      <!--SEssion detail information--> 
       <p>Subject: {{ session_number.subject }}</p>
       <p>Time: {{ session_number.time_hour }}</p>
       <p>Date: {{session_number.calendar}}</p> 
       <p>Questions: {{ session_number.question }}</p>
 
       <br />
+      <!--Contact Me information-->
       <strong>If you've setup a session with me, please send me a confirmation with the subject Math Session to my following email and a message with your name. I will reply to you two hours before our session with the URL meeting. </strong>
       <a href="mailto:jessi316866@gmail.com">jessi316866@gmail.com</a>
-    </div>
+    </div> 
   </body> 
 </html> 

@@ -5,8 +5,11 @@ from django.contrib.auth.decorators import login_required
 
 #user must be logged to access the home page
 @login_required(login_url='login')
+#if not logged in redirect login page
 def HomePage(request):
+    #actual username of the user
     username = request.user.username
+    #username passed to the template
     context = {'username': username}
     return render (request,'home.html', context)
 
@@ -14,10 +17,14 @@ def HomePage(request):
 #form is submitted via POST method get username, email, passwords
 def SignupPage(request):
     if request.method=='POST':
+        #get data from submitted form
         username=request.POST.get('username')
         email=request.POST.get('email')
         initialpassword=request.POST.get('initialpassword')
         confirmpassword=request.POST.get('confirmpassword')
+
+        if User.objects.filter(username=username).exists():
+            return render(request, 'signup.html', {'error': 'Username is already taken!'})
 
         if initialpassword != confirmpassword:
             return HttpResponse("Not the same password!")
@@ -30,7 +37,7 @@ def SignupPage(request):
 
 def LoginPage(request):
     if request.method=='POST':
-        #asks for username in database
+        #get data from submitted form
         username=request.POST.get('username')
         pass1=request.POST.get('pass')
 
@@ -38,7 +45,7 @@ def LoginPage(request):
         user=authenticate(request,username=username,password=pass1)
 
         if user is not None:
-            #if user is correct and redirect the home page
+            #if user is authenticated redirect the home page
             login(request,user)
             return redirect('home')
         else:

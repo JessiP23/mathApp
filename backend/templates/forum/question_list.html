@@ -1,7 +1,7 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-  <head>
+  <head> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
@@ -9,10 +9,12 @@
   </head>
   <body>
     <header>
+      <!--Header with title and link-->
       <h1 class="classes">Question List</h1>
       <a href="{% url 'home' %}" class="link">Home</a>
     </header>
     <div class="section">
+      <!--List of questions displayed with description, author, and time-->
       {%for question in list_question%}
       <div class="question">
         <h3><a href="{% url 'forum:view_question' question.id %}">{{question.title}}</a></h3>
@@ -21,7 +23,8 @@
       </div>
       <hr>
       {%endfor%}
-      <a href="{% url 'forum:post_question' %}">Post a new question</a>
+      <!--Post a new question-->
+      <a class="text_post" href="{% url 'forum:post_question' %}">Post a new question</a>
     </div>
   </body>
 </html>

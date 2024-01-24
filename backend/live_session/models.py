@@ -8,5 +8,6 @@ class SetSession(models.Model):
     time_hour = models.TimeField()
     question = models.TextField(default='')
 
-    def __str__(self):
-        return f"Session for {self.user.username} on {self.calendar} - Subject: {self.subject}"
+    #string representation
+    def __str__(self): 
+        return f"User: {self.user.username}, date: {self.calendar}, and subject: {self.subject}"

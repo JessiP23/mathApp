@@ -1,6 +1,7 @@
 from django.urls import path, include
 from . import views
 
+#transferred url into app class
 app_name = 'class'
 
 urlpatterns = [

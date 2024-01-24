@@ -9,7 +9,7 @@
         margin: 0;
         font-family: Arial, sans-serif;
       }
-
+ 
       header{
         display: flex;
         flex-direction: row;
@@ -56,12 +56,14 @@
   </head>
   <body>
     <header>
+      <!--Header with Home and Logout options--> 
       <h1 class="classes">Classes</h1>
       <div class="links">
         <a href="{% url 'home' %}">Home</a>
         <a href="{% url 'logout' %}" >Logout</a>
       </div>
     </header>
+    <!--List of classes with its respective link for content-->
     <div class="list-class">
       <a href="{% url 'ma010' %}" class="class">MA 010 (Basic Mathematics)</a>
       <a href="{% url 'ma025' %}" class="class">MA 025 (Accelerated Algebra)</a>

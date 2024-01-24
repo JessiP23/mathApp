@@ -12,18 +12,22 @@
       <h1 class="classes">Question View</h1>
       <a href="{% url 'forum:question_list' %}" class="link">Go Back</a>
     </header>
+    <!--Information displayed on question created-->
     <div class="section">
       <h2 class="capital">Title: {{question.title}}</h2>
       <p class="capital">Description: {{question.description}}</p>
       <p class="capital">Posted by: {{question.user.username}} | Posted at: {{question.timepost}}</p>
       <div class="image">
         {% if question.file %}
+        <!--Image rendering-->
         <img src="{{question.file.url}}" alt="File Question Image" style="max-width: 200px; margin-bottom: 5%;">
         {% endif %}
       </div>
+      <!--Existing comments-->
       {% for comment in question.comments.all %}
       <p>{{comment.text}}</p>
       {% endfor %}
+      <!--Add comment parts-->
       <a href="{% url 'forum:create_comment' question_id=question.id %}" class="link" style="margin: 3%">Add Comment</a>
     </div>
   </body>

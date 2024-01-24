@@ -31,6 +31,7 @@ urlpatterns = [
     path('live_session/', include('live_session.urls', namespace="live_session"))
 ] 
 
+#load static and media files
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -3,7 +3,7 @@ from .models import SetSession
 from .forms import SessionForm
 from django.views import View
 # Create your views here.
-
+ 
 class ScheduleSession(View):
     def get(self, request):
         form = SessionForm()

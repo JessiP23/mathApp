@@ -9,9 +9,10 @@
   <body>
     <h1>Schedule your session</h1>
     <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'live_session:list_session' %}">My Session List</a>
     <form method="post" action="{% url 'live_session:schedule_session' %}">
       {% csrf_token %}
-      {{form.as_p}}
+      {{form.as_p}} 
       <button type="submit">Schedule session</button>
     </form>
   </body>

@@ -1,14 +1,32 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/session.css' %}" >
   </head>
   <body>
-    <h2>Your Sessions</h2>
-    <a href="{% url 'live_session:schedule_session' %}" class="redirect-button">Go back</a>
-    <div>
+    <header>
+      <h2 class="classes">Sessions List</h2>
+      <a href="{% url 'live_session:schedule_session' %}" class="link">Go back</a>
+    </header> 
+    <div class="section">
+      <h2>My Sessions</h2>
+      <p>Click your class to get details information</p>
+      {% if list_session %}
+      <ul>
+        {% for session in list_session %}
+          <li>
+            <a href="{% url 'live_session:detail_session' session.id %}">{{ session.subject }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <p>No sessions scheduled yet.</p>
+      {% endif %}
+      <h2>To Proceed you need a PayPal account</h2>
       <p>The price for subjects: </p>
       <ul>
         <li>Placement Test: <strong>$15.00</strong></li>
@@ -17,17 +35,11 @@
         <li>Precalculus: <strong>$21.00</strong></li>
         <li>Calculus I <strong>$24.00</strong></li>
       </ul>
+      <p><strong>You can pay the full session, pay more or the most you can afford.</strong></p>
+      <h3>Here is my Paypal URL:</h3>
+      <a href="https://www.paypal.me/JessiPaviaMartinez">paypal.me/JessiPaviaMartinez</a>
+      <p>Here is my QR code: </p>
+      <img src="{% static 'qrcode.png' %}" alt="expression one step">
     </div>
-    {% if list_session %}
-      <ul>
-        {% for session in list_session %}
-          <li>
-            <a href="{% url 'live_session:detail_session' session.id %}">{{ session.subject }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p>No sessions scheduled yet.</p>
-    {% endif %}
   </body>
 </html> 

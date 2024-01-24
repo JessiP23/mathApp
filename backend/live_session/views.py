@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .models import SetSession
 from .forms import SessionForm
 from django.views import View
+from django.core.mail import send_mail
+from django.urls import reverse
 # Create your views here.
  
 class ScheduleSession(View):
@@ -15,6 +17,7 @@ class ScheduleSession(View):
             session = form.save(commit=False)
             session.user = request.user
             session.save()
+
             return redirect('live_session:list_session')
         
         else:

@@ -6,7 +6,7 @@ class SetSession(models.Model):
     calendar = models.DateField()
     subject = models.CharField(max_length=60)
     time_hour = models.TimeField()
-    question = models.TextField(default='Enter any questions')
+    question = models.TextField(default='')
 
     def __str__(self):
         return f"Session for {self.user.username} on {self.calendar} - Subject: {self.subject}"

@@ -1,17 +1,26 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styling/session_detail.css' %}" >
   </head>
   <body>
-    <h1>Details of your session</h1>
-    <a href="{% url 'live_session:list_session' %}">Go Back</a>
-    <p>Subject: {{ session_number.subject }}</p>
-    <p>Time: {{ session_number.time_hour }}</p>
-    <p>Price per Hour: {{ session_number.price_hour }}</p>
-    <p>Questions: {{ session_number.question }}</p>
+    <header>  
+      <h1 class="classes">Details of your session</h1>
+      <a href="{% url 'live_session:list_session' %}" class="link">Go Back</a>
+    </header>
+    <div class="section">  
+      <p>Subject: {{ session_number.subject }}</p>
+      <p>Time: {{ session_number.time_hour }}</p>
+      <p>Date: {{session_number.calendar}}</p> 
+      <p>Questions: {{ session_number.question }}</p>
 
+      <br />
+      <strong>If you've setup a session with me, please send me a confirmation with the subject Math Session to my following email and a message with your name. I will reply to you two hours before our session with the URL meeting. </strong>
+      <a href="mailto:jessi316866@gmail.com">jessi316866@gmail.com</a>
+    </div>
   </body> 
 </html> 

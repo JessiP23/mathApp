@@ -1,9 +1,0 @@
-services:
-  - name: web
-    envVars:
-      - key: DJANGO_SETTINGS_MODULE
-        value: "backend.settings"
-    buildCommand: |
-      pip install -r requirements.txt
-      pip install gunicorn==20.1.0
-    startCommand: "waitress-serve --port $PORT backend.wsgi:application"

@@ -5,5 +5,5 @@ services:
         value: "backend.settings"
     buildCommand: |
       pip install -r requirements.txt
-      python -m pip install gunicorn==20.1.0
+      pip install gunicorn==20.1.0
     startCommand: "gunicorn backend.wsgi:application --bind 0.0.0.0:$PORT"
